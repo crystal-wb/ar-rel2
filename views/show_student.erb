@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <p>Name: <%=@student.name%></p>
+        <p>Email:  <%=@student.email%></p>
+        <br>
+        <p>Classes</p>
+        <% @classes.each do |class| %>
+            <a href="/show_class?id=<%=college_class.id%>"><%=college_class.name%></a>
+        <% end %>    
+        <br>
+        <a href='/students'>Student List</a>
+    </body>
+</html>
