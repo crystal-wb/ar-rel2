@@ -6,7 +6,7 @@
         <p>Email:  <%=@student.email%></p>
         <br>
         <p>Classes</p>
-        <% @classes.each do |class| %>
+        <% @classes.each do |college_class| %>
             <a href="/show_class?id=<%=college_class.id%>"><%=college_class.name%></a>
         <% end %>    
         <br>

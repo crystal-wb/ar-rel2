@@ -4,7 +4,6 @@
     <body>
         <p>Student List</p>
         <br>
-        <a href='/show_student'>Add a User</a>
         <% @students.each do |student| %>
             <p><a href="/show_student?id=<%=student.id%>"><%=student.name%></a></p>
         <% end %>

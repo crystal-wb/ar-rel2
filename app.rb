@@ -6,6 +6,10 @@ require './models/college_class'
 require './models/student_class'
 set :database, { adapter: "sqlite3", database: "mydb.db" }
 
+get '/' do
+    erb :home
+end
+
 get '/students' do
     @students = Student.all
     erb :students
@@ -23,7 +27,7 @@ get '/classes' do
 end
 
 get '/show_class' do
-    @class = Class.find(params[:id])
+    @class = CollegeClass.find(params[:id])
     @students = @class.students
     erb :show_class
 end
